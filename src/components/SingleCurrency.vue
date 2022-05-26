@@ -1,0 +1,55 @@
+<template>
+  <div>
+    <div id="wrapper">
+      <div class="flex space-between center-v">
+        <div class="info flex">
+          <div id="currency-logo"></div>
+          <div class="info-text">
+            <p class="currency-name">{{ currency.name }}</p>
+            <p>0</p>
+          </div>
+        </div>
+        <p class="value">$0.00</p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: ["currency"],
+};
+</script>
+
+<style lang="sass" scoped>
+@import '@/global.sass'
+
+.flex
+  display: flex
+
+.space-between
+    justify-content: space-between
+
+.center-v
+  align-items: center
+
+#wrapper
+  margin: $std-margin-internal
+
+#currency-logo
+  width: 60px
+  height: 60px
+  background-color: gray
+  border-radius: 50%
+
+.info-text
+  margin-left: 10px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  p
+    font-size: 12px
+
+.currency-name
+  color: $main-white
+</style>
