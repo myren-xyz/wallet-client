@@ -5,7 +5,7 @@
   </header>
   <nav id="navigation">
     <router-link to="/">Home</router-link>
-    <router-link to="/history">History</router-link>
+    <!-- <router-link to="/history">History</router-link> -->
     <router-link to="/setting">Setting</router-link>
   </nav>
   <router-view />

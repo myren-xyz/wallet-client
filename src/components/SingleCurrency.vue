@@ -43,8 +43,8 @@ export default {
   border-radius: 50%
 
 #currency-logo
-  width: 60px
-  height: 60px
+  width: 50px
+  height: 50px
   #logo
     width: 100%
     height: 100%
