@@ -3,7 +3,9 @@
     <div id="wrapper">
       <div class="flex space-between center-v">
         <div class="info flex">
-          <div id="currency-logo"></div>
+          <div id="currency-logo" :class="{ default: !currency.image }">
+            <img v-if="currency.image" id="logo" :src="currency.image" />
+          </div>
           <div class="info-text">
             <p class="currency-name">{{ currency.name }}</p>
             <p>0</p>
@@ -36,11 +38,17 @@ export default {
 #wrapper
   margin: $std-margin-internal
 
+.default
+  background: linear-gradient(45deg, #e5e5e5, grey)
+  border-radius: 50%
+
 #currency-logo
   width: 60px
   height: 60px
-  background-color: gray
-  border-radius: 50%
+  #logo
+    width: 100%
+    height: 100%
+    border: none
 
 .info-text
   margin-left: 10px
